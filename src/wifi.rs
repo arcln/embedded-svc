@@ -188,6 +188,7 @@ pub struct ClientConfiguration {
     pub ssid: heapless::String<32>,
     pub bssid: Option<[u8; 6]>,
     //pub protocol: Protocol,
+    #[cfg_attr(feature = "use_serde", serde(default))]
     pub auth_method: AuthMethod,
     pub password: heapless::String<64>,
     pub channel: Option<u8>,
